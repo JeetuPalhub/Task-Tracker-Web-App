@@ -21,7 +21,7 @@ router.get("/", async (req, res) => {
 });
 
 // UPDATE STATUS
-router.get("/:id", async (req, res) => {
+router.put("/:id", async (req, res) => {
     const task = await Task.findByIdAndUpdate(
         req.params.id,
         { status: req.body.status },
