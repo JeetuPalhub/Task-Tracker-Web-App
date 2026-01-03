@@ -16,7 +16,7 @@ router.post("/", async (req, res) => {
 
 // READ
 router.get("/", async (req, res) => {
-    const tasks = await Task.find().toSorted({ dueDate: 1});
+    const tasks = await Task.find().sort({ dueDate: 1 });
     res.json(tasks);
 });
 
